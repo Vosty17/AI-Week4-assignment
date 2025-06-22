@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
-import joblib
+#import joblib
 
 def load_and_preprocess_images(folder_path, label, target_size=(128, 128)):
     """
@@ -112,9 +112,9 @@ def main():
     print(classification_report(y_val, val_preds, target_names=['benign', 'malignant']))
     
     # Save model
-    model_path = "breast_cancer_detector_grayscale.pkl"
-    joblib.dump(model, model_path)
-    print(f"\nModel saved to {model_path}")
+    #model_path = "breast_cancer_detector_grayscale.pkl"
+    #joblib.dump(model, model_path)
+    #print(f"\nModel saved to {model_path}")
     
     # Process test images (can handle both color and grayscale)
     print("\nProcessing test images...")
