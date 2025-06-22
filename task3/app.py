@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 
 # App title
-st.title("Medical Image Classifier")
+st.title("Breast Cancer Image Classifier")
 
 # 1. Load the pre-trained model
 model = joblib.load('task3/breast_cancer_detector_grayscale.pkl')
