@@ -7,8 +7,7 @@ import numpy as np
 st.title("Medical Image Classifier")
 
 # 1. Load the pre-trained model
-model = joblib.load('breast_cancer_detector_grayscale.pkl') 
-
+model = joblib.load('task3/breast_cancer_detector_grayscale.pkl')
 # 2. File uploader
 uploaded_file = st.file_uploader("Upload an image", type=['jpg', 'png', 'jpeg'])
 
