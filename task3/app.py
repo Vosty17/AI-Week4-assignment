@@ -2,6 +2,7 @@ import streamlit as st
 import joblib
 import cv2
 import numpy as np
+from PIL import Image
 
 # App title
 st.title("Medical Image Classifier")
