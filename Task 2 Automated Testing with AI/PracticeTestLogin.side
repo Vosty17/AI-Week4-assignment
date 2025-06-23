@@ -1,0 +1,102 @@
+{
+  "id": "login-test-project",
+  "version": "2.0",
+  "name": "PracticeTestLogin",
+  "url": "https://practicetestautomation.com",
+  "tests": [{
+    "id": "valid-login-test",
+    "name": "Valid Login",
+    "commands": [{
+      "id": "76163aab-5055-4c77-aeb1-467a0b802b9a",
+      "comment": "",
+      "command": "open",
+      "target": "/practice-test-login/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d364aaea-3e11-43ea-923d-60a03d121d2d",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [],
+      "value": "student"
+    }, {
+      "id": "31ee5dd1-0357-42a0-a1fa-a7ed8a0a9fae",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [],
+      "value": "Password123"
+    }, {
+      "id": "abdcf5b3-1504-49eb-847a-6f9e8f96b8aa",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63fb08b0-7a87-47d4-8d12-fd7f253589da",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1.post-title",
+      "targets": [],
+      "value": "Logged In Successfully"
+    }, {
+      "id": "550d7353-fff9-45fe-a5d5-1d75698e8102",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=a.wp-block-button__link",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "invalid-login-test",
+    "name": "Invalid Login",
+    "commands": [{
+      "id": "7230e7ab-123a-491b-b3a8-0b4e9cfca4af",
+      "comment": "",
+      "command": "open",
+      "target": "/practice-test-login/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a31cd869-399c-454b-9b22-df5fa6a7e55f",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [],
+      "value": "wronguser"
+    }, {
+      "id": "0300afc2-cf4d-4aee-b3b7-4e7b3d873636",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [],
+      "value": "wrongpass"
+    }, {
+      "id": "7a8433b4-6bb5-47da-9c10-70c0ab2343ca",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa74908b-eb3d-4739-8f66-d3fa75867a6c",
+      "comment": "",
+      "command": "assertTextContains",
+      "target": "css=div#error",
+      "targets": [],
+      "value": "Your username is invalid!"
+    }]
+  }],
+  "suites": [{
+    "id": "login-suite",
+    "name": "Practice Test Login Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["valid-login-test", "invalid-login-test"]
+  }],
+  "urls": ["https://practicetestautomation.com/"],
+  "plugins": []
+}
